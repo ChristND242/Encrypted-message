@@ -325,7 +325,7 @@ st.set_page_config(page_title="Enhanced Encryption Tool", layout="wide", page_ic
 # --------------------- LANGUAGE SELECTION ---------------------
 language = st.sidebar.selectbox("Choose Language / Choisissez la langue", ["English", "Français"])
 
-# Add validation for language selection, with fallback to English
+
 if language == "English":
     lang = LANG.get("en", LANG["en"])  # Defaults to English if the key is missing
     lang_code = "en"
@@ -333,7 +333,7 @@ elif language == "Français":
     lang = LANG.get("fr", LANG["en"])  # Defaults to English if the key is missing
     lang_code = "fr"
 else:
-    lang = LANG["en"]  # Defaults to English in case of an invalid selection
+    lang = LANG["en"]  
     lang_code = "en"
 
 # --------------------- HELP SECTION ---------------------
